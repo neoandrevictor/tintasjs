@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <h1 id="titulo">
+        Calculo de tintas
+    </h1>
+
+    <div class="container-fluid">
+
+        <table class="table text-center " id="paredes">
+            <thead class="thead-dark">
+                <tr>
+                    <th>
+                        Parede
+                    </th>
+                    <th>
+                        Altura
+                    </th>
+                    <th>
+                        Largura
+                    </th>
+                    <th>
+                        Area
+                    </th>
+                    <th>
+                        Portas
+                    </th>
+                    <th>
+                        Janelas
+                    </th>
+                    <th>
+                        Area
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="parede1">
+                        1
+                    </td>
+                    <td>
+
+                        <input type="number" class="form-control text-right" id="altura_p1" />
+                    </td>
+                    <td>
+                        <input type="number" class="form-control text-right" id="largura_p1"
+                            onfocusout="areasParede()" />
+                    </td>
+                    <td id="area_p1" class="text-center align-middle">
+
+                    </td>
+
+                    <td>
+                        <input type="number" class="form-control text-right" id="porta_p1" />
+                    </td>
+
+                    <td>
+
+                        <input type="number" class="form-control text-right" id="janela_p1"
+                            onfocusout="areaPortaJanelas()" />
+                    </td>
+                    <td id="areaValor2" class="text-center align-middle"></td>
+                </tr>
+                <tr class="table">
+                    <td>
+                        2
+                    </td>
+                    <td><input type="number" class="form-control" id="altura_p2" /></td>
+                    <td>
+                        <input type="number" class="form-control" id="largura_p2" />
+                    </td>
+                    <td id="area_p2"></td>
+                    <td>
+                        <input type="number" class="form-control" id="porta_p2" />
+                    </td>
+
+                    <td>
+                        <input type="number" class="form-control" id="janela_p2" />
+                    </td>
+                    <td></td>
+                </tr>
+                <!-- <tr class="table-success">
+                <td>
+                    2
+                </td>
+                <td>
+                    TB - Monthly
+                </td>
+                <td>
+                    02/04/2012
+                </td>
+                <td>
+                    Declined
+                </td>
+            </tr> -->
+                <tr class="table">
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        <input type="number" class="form-control" id="altura_p3" />
+                    </td>
+                    <td>
+                        <input type="number" class="form-control" id="largura_p3" />
+                    </td>
+                    <td id="area_p3"></td>
+                    <td>
+                        <input type="number" class="form-control" id="porta_p3" />
+                    </td>
+
+                    <td><input type="number" class="form-control" id="janela_p3" /></td>
+                </tr>
+                <tr class="table">
+                    <td>
+                        4
+                    </td>
+                    <td>
+                        <input type="number" class="form-control" id="altura_p4" />
+                    </td>
+                    <td>
+                        <input type="number" class="form-control" id="largura_p4" />
+                    </td>
+                    <td id="area_p4"></td>
+                    <td>
+                        <input type="number" class="form-control" id="porta_p4" />
+                    </td>
+                    <td>
+                        <input type="number" class="form-control" id="janela_p4" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-primary">
+            Calcular</button>
+        <script src="./js/area.js"></script>
+</body>
+
+</html>
