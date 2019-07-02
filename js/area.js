@@ -6,16 +6,16 @@ const areaJanelaPorta = janela * porta
 // variavel para controle de erros antes de submeter
 let qtdeErros = 0;
 
-function areasParede() {
+function areasParede(linha) {
 
 
-    let td_altura = document.getElementById("altura_p1");
+    let td_altura = linha.children[1].children[0];
     let altura = td_altura.value;
 
-    let td_largura = document.getElementById("largura_p1");
+    let td_largura = linha.children[2].children[0];
     let largura = td_largura.value;
 
-    let areaValor = document.getElementById("area_p1");
+    let areaValor = linha.children[3];
 
     let area = altura * largura;
 
@@ -32,6 +32,7 @@ function areasParede() {
         areaValor.innerHTML = area + "m²";
         qtdeErros = 0;
         console.log(area);
+        areaPortaJanelas(linha,area);
         return area;
 
     }
@@ -41,18 +42,18 @@ function areasParede() {
 // inicio calculo de area das portas e janelas
 
 
-function areaPortaJanelas() {
+function areaPortaJanelas(linha,area) {
 
-    let areaParedes = areasParede();
+    let areaParedes = (area);
 
-    let qtdePortas = document.getElementById("porta_p1").value;
+    let qtdePortas =linha.children[4].children[0].value;
     let areaPortas = qtdePortas * porta;
-    let qtdeJanelas = document.getElementById("janela_p1").value;
+    let qtdeJanelas = linha.children[5].children[0].value;
     let areaJanelas = qtdeJanelas * janela;
 
     let areaTotalPortaJanelas = areaJanelas + areaPortas;
 
-    let areaValor2 = document.getElementById("areaValor2");
+    let areaValor2 = linha.children[3];
     
 
     // verifica as regras de negocio para janelas
